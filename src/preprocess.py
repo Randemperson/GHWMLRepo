@@ -14,7 +14,7 @@ def preprocess_data(df, target_cols):
     
     preprocessor = ColumnTransformer(
         transformers=[
-            ('num', StandardScaler(), num_cols),
-            ('cat', categorical_pipeline, cat_cols),
+            ('num', StandardScaler(), numeric_features),
+            ('cat', categorical_pipeline, categorical_features),
         ])
     return preprocessor, x
