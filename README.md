@@ -1,5 +1,5 @@
 # GHWMLRepo
-First ML model from scratch. (Regression model created with directions from https://www.youtube.com/watch?v=nKMQHfiNIgo)
+First ML model from scratch. (Regression model and setup created with directions from https://www.youtube.com/watch?v=nKMQHfiNIgo)
 
 [Dataset Link](https://www.kaggle.com/datasets/mahmoudelhemaly/students-grading-dataset)
 
