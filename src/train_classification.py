@@ -38,4 +38,5 @@ report = classification_report(y_test, preds)
 print(f"Accuracy: {accuracy}")
 print("Classification Report:")
 print(report)
+
 joblib.dump(model, 'models/classification_model.joblib')

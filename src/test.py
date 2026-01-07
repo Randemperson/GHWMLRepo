@@ -1,6 +1,8 @@
 import joblib
 from preprocess import preprocess_data
 
+from train_classification import assign_grade
+
 from utils import load_standard_data, load_biased_data
 
 # Load your saved model
@@ -21,4 +23,8 @@ predictions = modelReg.predict(df_100)
 print(predictions)
 df_100["Total_score"] = (df_100["Midterm_Score"] + df_100["Final_Score"] + df_100["Projects_Score"]) / 3
 print(df_100["Total_score"])
-
+df_100c["Total_score"] = (df_100c["Midterm_Score"] + df_100c["Final_Score"] + df_100c["Projects_Score"]) / 3
+predictions_clf = modelClf.predict(df_100c)
+print(predictions_clf)
+df_100c["Predicted_Grade"] = df_100c["Total_score"].apply(assign_grade)
+print(df_100c["Predicted_Grade"])
